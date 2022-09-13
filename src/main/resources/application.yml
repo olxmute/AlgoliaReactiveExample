@@ -1,0 +1,10 @@
+algolia:
+  index-name: ${ALGOLIA_INDEX_NAME}
+  secrets:
+    application-id: ${ALGOLIA_APPLICATION_ID}
+    api-key: ${ALGOLIA_API_KEY}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@localhost:27017/algolia_test?authSource=admin

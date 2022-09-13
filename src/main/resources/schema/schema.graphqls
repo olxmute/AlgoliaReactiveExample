@@ -1,0 +1,24 @@
+type ObjectId {
+    raw: String!
+}
+
+type AlgoliaProductItem {
+    name: String!
+    description: String!
+    objectID: ObjectId!
+}
+
+input AlgoliaProductItemInput {
+    name: String!
+    description: String!
+}
+
+type Query {
+    findById(id: String!): AlgoliaProductItem
+    searchItems(query: String!): [AlgoliaProductItem!]!
+}
+
+type Mutation {
+    updateItem(id: String!, item: AlgoliaProductItemInput!): AlgoliaProductItem
+    removeItem(id: String!): String
+}
